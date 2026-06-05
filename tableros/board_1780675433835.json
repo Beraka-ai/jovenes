@@ -1,0 +1,90 @@
+{
+  "title": "REUNIÓN DE JÓVENES",
+  "categories": [
+    {
+      "name": "RELACION",
+      "questions": [
+        {
+          "pts": 100,
+          "text": "¿Qué dice la Biblia acerca de amigos con derecho?"
+        },
+        {
+          "pts": 400,
+          "text": "¿Qué significa no despiertes el amor antes de tiempo?"
+        },
+        {
+          "pts": 800,
+          "text": "¿Sexualidad, quien te enseña?"
+        },
+        {
+          "pts": 1000,
+          "text": "¿Por qué es importante guardar el corazón en el noviazgo según Proverbios 4:23?"
+        }
+      ]
+    },
+    {
+      "name": "ARREBATAMIENTO",
+      "questions": [
+        {
+          "pts": 100,
+          "text": "¿Qué es el arrebatamiento?"
+        },
+        {
+          "pts": 400,
+          "text": "¿En qué libro de la Biblia se habla del arrebatamiento más directamente?"
+        },
+        {
+          "pts": 800,
+          "text": "¿Qué dice 1 Tesalonicenses 4:16-17 que pasará en el arrebatamiento?"
+        },
+        {
+          "pts": 1000,
+          "text": "¿Cómo debemos vivir sabiendo que el arrebatamiento puede ocurrir en cualquier momento?"
+        }
+      ]
+    },
+    {
+      "name": "DE TODO UN POCO",
+      "questions": [
+        {
+          "pts": 100,
+          "text": "¿Cuando necesito un consejo, a quien busco?"
+        },
+        {
+          "pts": 400,
+          "text": "¿Cómo reconoces a un amigo que te acerca a Dios?"
+        },
+        {
+          "pts": 800,
+          "text": "¿En este tiempo cuesta confiar, que busco en un hermano(a) para que me de buen consejo?"
+        },
+        {
+          "pts": 1000,
+          "text": "¿Como logro decir no a lo malo y si a lo bueno?"
+        }
+      ]
+    },
+    {
+      "name": "ESPÍRITU SANTO",
+      "questions": [
+        {
+          "pts": 100,
+          "text": "¿Quién es el Espíritu Santo?"
+        },
+        {
+          "pts": 400,
+          "text": "¿Qué frutos produce el Espíritu Santo según Gálatas 5:22?"
+        },
+        {
+          "pts": 800,
+          "text": "¿Qué significa ser lleno del Espíritu Santo en el diario vivi"
+        },
+        {
+          "pts": 1000,
+          "text": "¿Cuál es la diferencia entre conocer al Espíritu Santo y ser guiado por Él?"
+        }
+      ]
+    }
+  ],
+  "savedAt": "2026-06-05T16:03:53.835Z"
+}
