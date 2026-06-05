@@ -234,7 +234,7 @@ body{background:var(--bg);font-family:'DM Sans',sans-serif;min-height:100vh;colo
 <header id="header">
   <div id="header-left">
     <span id="eyebrow">Quiz Interactivo</span>
-    <h1 id="main-title-display">REUNIÓN DE JÓVENES LA CEIBA</h1>
+    <h1 id="main-title-display">NUEVO TABLERO</h1>
   </div>
   <div class="header-btns">
     <button class="hbtn" onclick="openHistory()">📋 Mis tableros</button>
@@ -246,20 +246,18 @@ body{background:var(--bg);font-family:'DM Sans',sans-serif;min-height:100vh;colo
 <!-- Scoreboard (game mode) -->
 <div id="scoreboard"></div>
 
-<div id="board"><div class="cat-header cat-0">RELACIONES</div><div class="cat-header cat-1">ARREBATAMIENTO</div><div class="cat-header cat-2">AMIGOS</div><div class="cat-header cat-3">ESPÍRITU SANTO</div><div class="q-card qcat-0"><span class="val">100</span></div><div class="q-card qcat-1"><span class="val">100</span></div><div class="q-card qcat-2"><span class="val">100</span></div><div class="q-card qcat-3"><span class="val">100</span></div><div class="q-card qcat-0"><span class="val">400</span></div><div class="q-card qcat-1"><span class="val">400</span></div><div class="q-card qcat-2"><span class="val">400</span></div><div class="q-card qcat-3"><span class="val">400</span></div><div class="q-card qcat-0"><span class="val">800</span></div><div class="q-card qcat-1"><span class="val">800</span></div><div class="q-card qcat-2"><span class="val">800</span></div><div class="q-card qcat-3"><span class="val">800</span></div><div class="q-card qcat-0"><span class="val">1000</span></div><div class="q-card qcat-1"><span class="val">1000</span></div><div class="q-card qcat-2"><span class="val">1000</span></div><div class="q-card qcat-3"><span class="val">1000</span></div></div>
+<div id="board"><div class="cat-header cat-0">CATEGORÍA 1</div><div class="cat-header cat-1">CATEGORÍA 2</div><div class="cat-header cat-2">CATEGORÍA 3</div><div class="cat-header cat-3">CATEGORÍA 4</div><div class="q-card qcat-0"><span class="val">100</span></div><div class="q-card qcat-1"><span class="val">100</span></div><div class="q-card qcat-2"><span class="val">100</span></div><div class="q-card qcat-3"><span class="val">100</span></div><div class="q-card qcat-0"><span class="val">400</span></div><div class="q-card qcat-1"><span class="val">400</span></div><div class="q-card qcat-2"><span class="val">400</span></div><div class="q-card qcat-3"><span class="val">400</span></div><div class="q-card qcat-0"><span class="val">800</span></div><div class="q-card qcat-1"><span class="val">800</span></div><div class="q-card qcat-2"><span class="val">800</span></div><div class="q-card qcat-3"><span class="val">800</span></div><div class="q-card qcat-0"><span class="val">1000</span></div><div class="q-card qcat-1"><span class="val">1000</span></div><div class="q-card qcat-2"><span class="val">1000</span></div><div class="q-card qcat-3"><span class="val">1000</span></div></div>
 
 <!-- Fullscreen Question -->
-<div id="q-screen">
-  <div id="q-bar"></div>
+<div id="q-screen" data-key="1-0" data-pts="100" class="">
+  <div id="q-bar" class="bar-1"></div>
   <div id="q-meta">
-    <span id="q-cat-badge">CATEGORÍA</span>
+    <span id="q-cat-badge" class="badge-1">ARREBATAMIENTO</span>
     <span id="q-pts-label">100 PTS</span>
   </div>
-  <div id="q-text">¿Pregunta aquí?</div>
+  <div id="q-text">¿Qué es el arrebatamiento?</div>
   <button id="q-close" onclick="closeQuestion()">ESC — Cerrar</button>
-  <div id="game-score-btns">
-    <div id="score-label">¿Quién respondió?</div>
-  </div>
+  <div id="game-score-btns"><div id="score-label">¿Quién respondió correctamente?</div></div>
 </div>
 
 <!-- Edit Panel -->
@@ -302,112 +300,112 @@ body{background:var(--bg);font-family:'DM Sans',sans-serif;min-height:100vh;colo
       <div class="edit-block-title">Categoría 1</div>
       <div class="field">
         <label>Nombre</label>
-        <input class="cat-inp" type="text" id="cname-0" value="RELACIONES">
+        <input class="cat-inp" type="text" id="cname-0" value="CATEGORÍA 1">
       </div>
       <div class="field-row">
         
           <div class="field">
             <label>100 puntos</label>
-            <textarea id="q-0-0" rows="3">¿Qué dice la Biblia que debemos hacer antes de casarnos?</textarea>
+            <textarea id="q-0-0" rows="3"></textarea>
           </div>
         
           <div class="field">
             <label>400 puntos</label>
-            <textarea id="q-0-1" rows="3">¿Qué significa estar "igualmente unidos" según 2 Corintios 6:14?</textarea>
+            <textarea id="q-0-1" rows="3"></textarea>
           </div>
         
           <div class="field">
             <label>800 puntos</label>
-            <textarea id="q-0-2" rows="3">¿Cuál es el fundamento que Dios diseñó para una relación sana?</textarea>
+            <textarea id="q-0-2" rows="3"></textarea>
           </div>
         
           <div class="field">
             <label>1000 puntos</label>
-            <textarea id="q-0-3" rows="3">¿Por qué es importante guardar el corazón en el noviazgo según Proverbios 4:23?</textarea>
+            <textarea id="q-0-3" rows="3"></textarea>
           </div>
         
       </div></div><div class="edit-block">
       <div class="edit-block-title">Categoría 2</div>
       <div class="field">
         <label>Nombre</label>
-        <input class="cat-inp" type="text" id="cname-1" value="ARREBATAMIENTO">
+        <input class="cat-inp" type="text" id="cname-1" value="CATEGORÍA 2">
       </div>
       <div class="field-row">
         
           <div class="field">
             <label>100 puntos</label>
-            <textarea id="q-1-0" rows="3">¿Qué es el arrebatamiento?</textarea>
+            <textarea id="q-1-0" rows="3"></textarea>
           </div>
         
           <div class="field">
             <label>400 puntos</label>
-            <textarea id="q-1-1" rows="3">¿En qué libro de la Biblia se habla del arrebatamiento más directamente?</textarea>
+            <textarea id="q-1-1" rows="3"></textarea>
           </div>
         
           <div class="field">
             <label>800 puntos</label>
-            <textarea id="q-1-2" rows="3">¿Qué dice 1 Tesalonicenses 4:16-17 que pasará en el arrebatamiento?</textarea>
+            <textarea id="q-1-2" rows="3"></textarea>
           </div>
         
           <div class="field">
             <label>1000 puntos</label>
-            <textarea id="q-1-3" rows="3">¿Cómo debemos vivir sabiendo que el arrebatamiento puede ocurrir en cualquier momento?</textarea>
+            <textarea id="q-1-3" rows="3"></textarea>
           </div>
         
       </div></div><div class="edit-block">
       <div class="edit-block-title">Categoría 3</div>
       <div class="field">
         <label>Nombre</label>
-        <input class="cat-inp" type="text" id="cname-2" value="AMIGOS">
+        <input class="cat-inp" type="text" id="cname-2" value="CATEGORÍA 3">
       </div>
       <div class="field-row">
         
           <div class="field">
             <label>100 puntos</label>
-            <textarea id="q-2-0" rows="3">¿Qué dice Proverbios 27:17 sobre la amistad?</textarea>
+            <textarea id="q-2-0" rows="3"></textarea>
           </div>
         
           <div class="field">
             <label>400 puntos</label>
-            <textarea id="q-2-1" rows="3">¿Cómo reconoces a un amigo que te acerca a Dios?</textarea>
+            <textarea id="q-2-1" rows="3"></textarea>
           </div>
         
           <div class="field">
             <label>800 puntos</label>
-            <textarea id="q-2-2" rows="3">¿Por qué las malas compañías corrompen las buenas costumbres según 1 Corintios 15:33?</textarea>
+            <textarea id="q-2-2" rows="3"></textarea>
           </div>
         
           <div class="field">
             <label>1000 puntos</label>
-            <textarea id="q-2-3" rows="3">¿Qué ejemplo de amistad verdadera vemos en la Biblia entre Jonatán y David?</textarea>
+            <textarea id="q-2-3" rows="3"></textarea>
           </div>
         
       </div></div><div class="edit-block">
       <div class="edit-block-title">Categoría 4</div>
       <div class="field">
         <label>Nombre</label>
-        <input class="cat-inp" type="text" id="cname-3" value="ESPÍRITU SANTO">
+        <input class="cat-inp" type="text" id="cname-3" value="CATEGORÍA 4">
       </div>
       <div class="field-row">
         
           <div class="field">
             <label>100 puntos</label>
-            <textarea id="q-3-0" rows="3">¿Quién es el Espíritu Santo</textarea>
+            <textarea id="q-3-0" rows="3"></textarea>
           </div>
         
           <div class="field">
             <label>400 puntos</label>
-            <textarea id="q-3-1" rows="3">¿Qué frutos produce el Espíritu Santo según Gálatas 5:22?</textarea>
+            <textarea id="q-3-1" rows="3"></textarea>
           </div>
         
           <div class="field">
             <label>800 puntos</label>
-            <textarea id="q-3-2" rows="3">¿Qué significa ser lleno del Espíritu Santo en el diario vivi</textarea>
+            <textarea id="q-3-2" rows="3"></textarea>
           </div>
         
           <div class="field">
             <label>1000 puntos</label>
-            <textarea id="q-3-3" rows="3">¿Cuál es la diferencia entre conocer al Espíritu Santo y ser guiado por Él?</textarea>
+            <textarea id="q-3-3" rows="3"></textarea>
           </div>
         
       </div></div></div>
@@ -456,11 +454,11 @@ body{background:var(--bg);font-family:'DM Sans',sans-serif;min-height:100vh;colo
     <div id="history-list" class="history-list"><div class="history-item current-item">
       <div class="hist-info">
         <div style="display:flex;align-items:center;gap:10px;">
-          <span class="hist-name">REUNIÓN DE JÓVENES</span>
+          <span class="hist-name">REUNIÓN DE JÓVENES LA CEIBA</span>
           <span class="current-badge">Activo</span>
         </div>
-        <span class="hist-meta">Guardado: 5 jun 2026, 01:10</span>
-        <div class="hist-cats"><span class="hist-cat-pill" style="background:#E8FF47">RELACIONES</span><span class="hist-cat-pill" style="background:#FF5C5C">ARREBATAMIENTO</span><span class="hist-cat-pill" style="background:#5CE8FF">AMIGOS</span><span class="hist-cat-pill" style="background:#BF7FFF">ESPÍRITU SANTO</span></div>
+        <span class="hist-meta">Guardado: 5 jun 2026, 01:29</span>
+        <div class="hist-cats"><span class="hist-cat-pill" style="background:#E8FF47">RELACION</span><span class="hist-cat-pill" style="background:#FF5C5C">ARREBATAMIENTO</span><span class="hist-cat-pill" style="background:#5CE8FF">AMIGOS</span><span class="hist-cat-pill" style="background:#BF7FFF">ESPÍRITU SANTO</span></div>
       </div>
       <div class="hist-actions">
         
@@ -535,94 +533,93 @@ function saveConfig() {
 
 // ── DATA ──
 let data = {
-  "title": "REUNIÓN DE JÓVENES LA CEIBA",
+  "title": "NUEVO TABLERO",
   "categories": [
     {
-      "name": "RELACION",
+      "name": "CATEGORÍA 1",
       "questions": [
         {
           "pts": 100,
-          "text": "¿Qué dice la Biblia que debemos hacer antes de casarnos?"
+          "text": "ASDF"
         },
         {
           "pts": 400,
-          "text": "¿Qué significa estar \"igualmente unidos\" según 2 Corintios 6:14?"
+          "text": "ASDF"
         },
         {
           "pts": 800,
-          "text": "¿Cuál es el fundamento que Dios diseñó para una relación sana?"
+          "text": "ASDF"
         },
         {
           "pts": 1000,
-          "text": "¿Por qué es importante guardar el corazón en el noviazgo según Proverbios 4:23?"
+          "text": "ASDF"
         }
       ]
     },
     {
-      "name": "ARREBATAMIENTO",
+      "name": "CATEGORÍA 2",
       "questions": [
         {
           "pts": 100,
-          "text": "¿Qué es el arrebatamiento?"
+          "text": "ASDF"
         },
         {
           "pts": 400,
-          "text": "¿En qué libro de la Biblia se habla del arrebatamiento más directamente?"
+          "text": "ASDF"
         },
         {
           "pts": 800,
-          "text": "¿Qué dice 1 Tesalonicenses 4:16-17 que pasará en el arrebatamiento?"
+          "text": "ASDF"
         },
         {
           "pts": 1000,
-          "text": "¿Cómo debemos vivir sabiendo que el arrebatamiento puede ocurrir en cualquier momento?"
+          "text": "ASDF"
         }
       ]
     },
     {
-      "name": "AMIGOS",
+      "name": "CATEGORÍA 3",
       "questions": [
         {
           "pts": 100,
-          "text": "¿Qué dice Proverbios 27:17 sobre la amistad?"
+          "text": "ASDF"
         },
         {
           "pts": 400,
-          "text": "¿Cómo reconoces a un amigo que te acerca a Dios?"
+          "text": "ASDF"
         },
         {
           "pts": 800,
-          "text": "¿Por qué las malas compañías corrompen las buenas costumbres según 1 Corintios 15:33?"
+          "text": "ASDF"
         },
         {
           "pts": 1000,
-          "text": "¿Qué ejemplo de amistad verdadera vemos en la Biblia entre Jonatán y David?"
+          "text": "ASDF"
         }
       ]
     },
     {
-      "name": "ESPÍRITU SANTO",
+      "name": "CATEGORÍA 4",
       "questions": [
         {
           "pts": 100,
-          "text": "¿Quién es el Espíritu Santo"
+          "text": "ASDF"
         },
         {
           "pts": 400,
-          "text": "¿Qué frutos produce el Espíritu Santo según Gálatas 5:22?"
+          "text": "ASDF"
         },
         {
           "pts": 800,
-          "text": "¿Qué significa ser lleno del Espíritu Santo en el diario vivi"
+          "text": "ASDF"
         },
         {
           "pts": 1000,
-          "text": "¿Cuál es la diferencia entre conocer al Espíritu Santo y ser guiado por Él?"
+          "text": "ASDF"
         }
       ]
     }
-  ],
-  "savedAt": "2026-06-05T07:10:17.531Z"
+  ]
 };
 // ── BOARD STORAGE ──
 async function getBoards() {
