@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="es"><head>
+<html lang="es">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reunión de Jóvenes</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 :root{
@@ -222,7 +223,7 @@ body{background:var(--bg);font-family:'DM Sans',sans-serif;min-height:100vh;colo
 <!-- Scoreboard (game mode) -->
 <div id="scoreboard"></div>
 
-<div id="board"><div class="cat-header cat-0">RELACIONES</div><div class="cat-header cat-1">ARREBATAMIENTO</div><div class="cat-header cat-2">AMIGOS</div><div class="cat-header cat-3">ESPÍRITU SANTO</div><div class="q-card qcat-0"><span class="val">100</span></div><div class="q-card qcat-1"><span class="val">100</span></div><div class="q-card qcat-2"><span class="val">100</span></div><div class="q-card qcat-3"><span class="val">100</span></div><div class="q-card qcat-0"><span class="val">400</span></div><div class="q-card qcat-1"><span class="val">400</span></div><div class="q-card qcat-2"><span class="val">400</span></div><div class="q-card qcat-3"><span class="val">400</span></div><div class="q-card qcat-0"><span class="val">800</span></div><div class="q-card qcat-1"><span class="val">800</span></div><div class="q-card qcat-2"><span class="val">800</span></div><div class="q-card qcat-3"><span class="val">800</span></div><div class="q-card qcat-0"><span class="val">1000</span></div><div class="q-card qcat-1"><span class="val">1000</span></div><div class="q-card qcat-2"><span class="val">1000</span></div><div class="q-card qcat-3"><span class="val">1000</span></div></div>
+<div id="board"></div>
 
 <!-- Fullscreen Question -->
 <div id="q-screen">
@@ -240,7 +241,7 @@ body{background:var(--bg);font-family:'DM Sans',sans-serif;min-height:100vh;colo
 </div>
 
 <!-- Edit Panel -->
-<div id="edit-panel" class="panel-overlay active">
+<div id="edit-panel" class="panel-overlay">
   <div class="panel-inner">
     <div class="panel-top">
       <h2>Editar tablero</h2>
@@ -271,123 +272,13 @@ body{background:var(--bg);font-family:'DM Sans',sans-serif;min-height:100vh;colo
           <button class="mode-btn selected" id="mode-teach" onclick="setMode('teach')" style="flex:1;padding:14px;">📖 Enseñanza</button>
           <button class="mode-btn" id="mode-game" onclick="setMode('game')" style="flex:1;padding:14px;">🏆 Juego</button>
         </div>
-        <div id="mode-explain" style="margin-top:12px;font-size:12px;color:var(--muted);padding:10px 14px;background:var(--surface2);border-radius:8px;line-height:1.6;">Las preguntas se abren una por una para que el grupo las piense junto. Sin equipos ni puntuación.</div>
+        <div id="mode-explain" style="margin-top:12px;font-size:12px;color:var(--muted);padding:10px 14px;background:var(--surface2);border-radius:8px;line-height:1.6;">
+          Las preguntas se abren una por una para que el grupo las piense junto. Sin equipos ni puntuación.
+        </div>
       </div>
     </div>
 
-    <div id="edit-cats"><div class="edit-block">
-      <div class="edit-block-title">Categoría 1</div>
-      <div class="field">
-        <label>Nombre</label>
-        <input class="cat-inp" type="text" id="cname-0" value="RELACIONES">
-      </div>
-      <div class="field-row">
-        
-          <div class="field">
-            <label>100 puntos</label>
-            <textarea id="q-0-0" rows="3">¿Qué dice la Biblia que debemos hacer antes de casarnos?</textarea>
-          </div>
-        
-          <div class="field">
-            <label>400 puntos</label>
-            <textarea id="q-0-1" rows="3">¿Qué significa estar "igualmente unidos" según 2 Corintios 6:14?</textarea>
-          </div>
-        
-          <div class="field">
-            <label>800 puntos</label>
-            <textarea id="q-0-2" rows="3">¿Cuál es el fundamento que Dios diseñó para una relación sana?</textarea>
-          </div>
-        
-          <div class="field">
-            <label>1000 puntos</label>
-            <textarea id="q-0-3" rows="3">¿Por qué es importante guardar el corazón en el noviazgo según Proverbios 4:23?</textarea>
-          </div>
-        
-      </div></div><div class="edit-block">
-      <div class="edit-block-title">Categoría 2</div>
-      <div class="field">
-        <label>Nombre</label>
-        <input class="cat-inp" type="text" id="cname-1" value="ARREBATAMIENTO">
-      </div>
-      <div class="field-row">
-        
-          <div class="field">
-            <label>100 puntos</label>
-            <textarea id="q-1-0" rows="3">¿Qué es el arrebatamiento?</textarea>
-          </div>
-        
-          <div class="field">
-            <label>400 puntos</label>
-            <textarea id="q-1-1" rows="3">¿En qué libro de la Biblia se habla del arrebatamiento más directamente?</textarea>
-          </div>
-        
-          <div class="field">
-            <label>800 puntos</label>
-            <textarea id="q-1-2" rows="3">¿Qué dice 1 Tesalonicenses 4:16-17 que pasará en el arrebatamiento?</textarea>
-          </div>
-        
-          <div class="field">
-            <label>1000 puntos</label>
-            <textarea id="q-1-3" rows="3">¿Cómo debemos vivir sabiendo que el arrebatamiento puede ocurrir en cualquier momento?</textarea>
-          </div>
-        
-      </div></div><div class="edit-block">
-      <div class="edit-block-title">Categoría 3</div>
-      <div class="field">
-        <label>Nombre</label>
-        <input class="cat-inp" type="text" id="cname-2" value="AMIGOS">
-      </div>
-      <div class="field-row">
-        
-          <div class="field">
-            <label>100 puntos</label>
-            <textarea id="q-2-0" rows="3">¿Qué dice Proverbios 27:17 sobre la amistad?</textarea>
-          </div>
-        
-          <div class="field">
-            <label>400 puntos</label>
-            <textarea id="q-2-1" rows="3">¿Cómo reconoces a un amigo que te acerca a Dios?</textarea>
-          </div>
-        
-          <div class="field">
-            <label>800 puntos</label>
-            <textarea id="q-2-2" rows="3">¿Por qué las malas compañías corrompen las buenas costumbres según 1 Corintios 15:33?</textarea>
-          </div>
-        
-          <div class="field">
-            <label>1000 puntos</label>
-            <textarea id="q-2-3" rows="3">¿Qué ejemplo de amistad verdadera vemos en la Biblia entre Jonatán y David?</textarea>
-          </div>
-        
-      </div></div><div class="edit-block">
-      <div class="edit-block-title">Categoría 4</div>
-      <div class="field">
-        <label>Nombre</label>
-        <input class="cat-inp" type="text" id="cname-3" value="ESPÍRITU SANTO">
-      </div>
-      <div class="field-row">
-        
-          <div class="field">
-            <label>100 puntos</label>
-            <textarea id="q-3-0" rows="3">¿Quién es el Espíritu Santo?</textarea>
-          </div>
-        
-          <div class="field">
-            <label>400 puntos</label>
-            <textarea id="q-3-1" rows="3">¿Qué frutos produce el Espíritu Santo según Gálatas 5:22?</textarea>
-          </div>
-        
-          <div class="field">
-            <label>800 puntos</label>
-            <textarea id="q-3-2" rows="3">¿Qué significa ser lleno del Espíritu Santo en el diario vivir?</textarea>
-          </div>
-        
-          <div class="field">
-            <label>1000 puntos</label>
-            <textarea id="q-3-3" rows="3">¿Cuál es la diferencia entre conocer al Espíritu Santo y ser guiado por Él?</textarea>
-          </div>
-        
-      </div></div></div>
+    <div id="edit-cats"></div>
 
     <!-- Config collapsible -->
     <div class="config-block">
@@ -399,9 +290,9 @@ body{background:var(--bg);font-family:'DM Sans',sans-serif;min-height:100vh;colo
             <p>Guardar y compartir en línea</p>
           </div>
         </div>
-        <span class="config-arrow open" id="config-arrow">▾</span>
+        <span class="config-arrow" id="config-arrow">▾</span>
       </div>
-      <div class="config-body open" id="config-body">
+      <div class="config-body" id="config-body">
         <div class="config-grid">
           <div class="field">
             <label>Usuario</label>
@@ -416,16 +307,16 @@ body{background:var(--bg);font-family:'DM Sans',sans-serif;min-height:100vh;colo
             <input type="password" id="gh-token" placeholder="github_pat_...">
           </div>
         </div>
-        <div id="config-saved-badge" style="display: inline-flex;" class="config-saved-badge">✓ Configuración guardada</div>
+        <div id="config-saved-badge" style="display:none;" class="config-saved-badge">✓ Configuración guardada</div>
         <button class="config-save-btn" onclick="saveConfig()">💾 Guardar configuración</button>
-        <div id="pub-status" class="pub-status loading">Preparando publicación...</div>
+        <div id="pub-status" class="pub-status"></div>
       </div>
     </div>
 
     <div class="btn-row">
       <button class="btn-primary" onclick="saveAll()">Guardar cambios</button>
       <button class="btn-secondary" onclick="saveAndExport()">↓ Exportar como archivo</button>
-      <button class="btn-publish" id="btn-publish" onclick="publishOnline()" disabled="">🌐 Publicar en línea</button>
+      <button class="btn-publish" id="btn-publish" onclick="publishOnline()">🌐 Publicar en línea</button>
     </div>
   </div>
 </div>
@@ -482,7 +373,7 @@ let used = {};
 let currentBoardId = null;
 
 // ── CONFIG ──
-let ghConfig = {"user":"","repo":"","token":""};
+let ghConfig = { user: '', repo: '', token: '' };
 
 function loadConfig() {
   try {
@@ -502,94 +393,47 @@ function saveConfig() {
 
 // ── DATA ──
 let data = {
-  "title": "REUNIÓN DE JÓVENES LA CEIBA",
-  "categories": [
+  title: 'REUNIÓN DE JÓVENES',
+  categories: [
     {
-      "name": "RELACIONES",
-      "questions": [
-        {
-          "pts": 100,
-          "text": "¿Qué dice la Biblia que debemos hacer antes de casarnos?"
-        },
-        {
-          "pts": 400,
-          "text": "¿Qué significa estar \"igualmente unidos\" según 2 Corintios 6:14?"
-        },
-        {
-          "pts": 800,
-          "text": "¿Cuál es el fundamento que Dios diseñó para una relación sana?"
-        },
-        {
-          "pts": 1000,
-          "text": "¿Por qué es importante guardar el corazón en el noviazgo según Proverbios 4:23?"
-        }
+      name: "RELACIONES",
+      questions: [
+        { pts: 100,  text: "¿Qué dice la Biblia que debemos hacer antes de casarnos?" },
+        { pts: 400,  text: "¿Qué significa estar \"igualmente unidos\" según 2 Corintios 6:14?" },
+        { pts: 800,  text: "¿Cuál es el fundamento que Dios diseñó para una relación sana?" },
+        { pts: 1000, text: "¿Por qué es importante guardar el corazón en el noviazgo según Proverbios 4:23?" }
       ]
     },
     {
-      "name": "ARREBATAMIENTO",
-      "questions": [
-        {
-          "pts": 100,
-          "text": "¿Qué es el arrebatamiento?"
-        },
-        {
-          "pts": 400,
-          "text": "¿En qué libro de la Biblia se habla del arrebatamiento más directamente?"
-        },
-        {
-          "pts": 800,
-          "text": "¿Qué dice 1 Tesalonicenses 4:16-17 que pasará en el arrebatamiento?"
-        },
-        {
-          "pts": 1000,
-          "text": "¿Cómo debemos vivir sabiendo que el arrebatamiento puede ocurrir en cualquier momento?"
-        }
+      name: "ARREBATAMIENTO",
+      questions: [
+        { pts: 100,  text: "¿Qué es el arrebatamiento?" },
+        { pts: 400,  text: "¿En qué libro de la Biblia se habla del arrebatamiento más directamente?" },
+        { pts: 800,  text: "¿Qué dice 1 Tesalonicenses 4:16-17 que pasará en el arrebatamiento?" },
+        { pts: 1000, text: "¿Cómo debemos vivir sabiendo que el arrebatamiento puede ocurrir en cualquier momento?" }
       ]
     },
     {
-      "name": "AMIGOS",
-      "questions": [
-        {
-          "pts": 100,
-          "text": "¿Qué dice Proverbios 27:17 sobre la amistad?"
-        },
-        {
-          "pts": 400,
-          "text": "¿Cómo reconoces a un amigo que te acerca a Dios?"
-        },
-        {
-          "pts": 800,
-          "text": "¿Por qué las malas compañías corrompen las buenas costumbres según 1 Corintios 15:33?"
-        },
-        {
-          "pts": 1000,
-          "text": "¿Qué ejemplo de amistad verdadera vemos en la Biblia entre Jonatán y David?"
-        }
+      name: "AMIGOS",
+      questions: [
+        { pts: 100,  text: "¿Qué dice Proverbios 27:17 sobre la amistad?" },
+        { pts: 400,  text: "¿Cómo reconoces a un amigo que te acerca a Dios?" },
+        { pts: 800,  text: "¿Por qué las malas compañías corrompen las buenas costumbres según 1 Corintios 15:33?" },
+        { pts: 1000, text: "¿Qué ejemplo de amistad verdadera vemos en la Biblia entre Jonatán y David?" }
       ]
     },
     {
-      "name": "ESPÍRITU SANTO",
-      "questions": [
-        {
-          "pts": 100,
-          "text": "¿Quién es el Espíritu Santo?"
-        },
-        {
-          "pts": 400,
-          "text": "¿Qué frutos produce el Espíritu Santo según Gálatas 5:22?"
-        },
-        {
-          "pts": 800,
-          "text": "¿Qué significa ser lleno del Espíritu Santo en el diario vivir?"
-        },
-        {
-          "pts": 1000,
-          "text": "¿Cuál es la diferencia entre conocer al Espíritu Santo y ser guiado por Él?"
-        }
+      name: "ESPÍRITU SANTO",
+      questions: [
+        { pts: 100,  text: "¿Quién es el Espíritu Santo?" },
+        { pts: 400,  text: "¿Qué frutos produce el Espíritu Santo según Gálatas 5:22?" },
+        { pts: 800,  text: "¿Qué significa ser lleno del Espíritu Santo en el diario vivir?" },
+        { pts: 1000, text: "¿Cuál es la diferencia entre conocer al Espíritu Santo y ser guiado por Él?" }
       ]
     }
   ]
 };
+
 // ── BOARD STORAGE ──
 function getBoards() {
   try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; }
@@ -990,7 +834,6 @@ async function publishOnline() {
   const { user, repo, token } = ghConfig;
   if (!user || !repo || !token) {
     setPubStatus('err', '⚠ Completa la configuración de publicación primero.');
-    // Open config section
     const body = document.getElementById('config-body');
     if (!body.classList.contains('open')) toggleConfig();
     return;
@@ -1001,41 +844,27 @@ async function publishOnline() {
   setPubStatus('loading', 'Preparando publicación...');
 
   try {
-    const filename = 'index.html';
-    const apiBase  = `https://api.github.com/repos/${user}/${repo}/contents/${filename}`;
-
-    let sha = null;
-    const getRes = await fetch(apiBase, {
-      headers: { Authorization: `token ${token}`, Accept: 'application/vnd.github.v3+json' }
-    });
-    if (getRes.ok) { const ex = await getRes.json(); sha = ex.sha; }
-
     const dataStr = JSON.stringify(data, null, 2);
     const ghStr   = JSON.stringify({user:'',repo:'',token:''});
     const updatedHtml = document.documentElement.outerHTML
       .replace(/let data = \{[\s\S]*?\};\s*\n\/\/ ── BOARD STORAGE/, `let data = ${dataStr};\n// ── BOARD STORAGE`)
       .replace(/let ghConfig = \{[\s\S]*?\};/, `let ghConfig = ${ghStr};`);
     const fullHtml = '<!DOCTYPE html>\n' + updatedHtml;
+    const encoded  = btoa(unescape(encodeURIComponent(fullHtml)));
 
     setPubStatus('loading', 'Publicando...');
-    const body2 = {
-      message: 'Actualizar tablero',
-      content: btoa(unescape(encodeURIComponent(fullHtml))),
-      ...(sha && { sha })
-    };
 
-    const putRes = await fetch(apiBase, {
-      method: 'PUT',
-      headers: {
-        Authorization: `token ${token}`,
-        Accept: 'application/vnd.github.v3+json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(body2)
+    // Use Netlify Function as proxy to avoid CORS
+    const res = await fetch('/.netlify/functions/publish', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ user, repo, token, content: encoded })
     });
 
-    if (!putRes.ok) { const err = await putRes.json(); throw new Error(err.message || putRes.statusText); }
-    setPubStatus('ok', `✓ ¡Publicado! Tu tablero ya está disponible en línea.`);
+    const result = await res.json();
+    if (!res.ok) throw new Error(result.error || 'Error al publicar');
+
+    setPubStatus('ok', '✓ ¡Publicado! Los cambios ya están en línea en youthebenezer.netlify.app');
     saveCurrentBoard();
     renderBoard();
 
@@ -1076,6 +905,5 @@ if (lastId) {
 }
 renderBoard();
 </script>
-
-
-</body></html>
+</body>
+</html>
