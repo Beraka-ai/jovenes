@@ -9,7 +9,7 @@ export async function onRequest(context) {
     if (!user || !repo || !token) return Response.json({ error: 'Faltan datos' }, { status: 400 });
 
     const apiUrl = `https://api.github.com/repos/${user}/${repo}/contents/tableros`;
-    const headers = { Authorization: `token ${token}`, Accept: 'application/vnd.github.v3+json' };
+    const headers = { Authorization: `token ${token}`, Accept: 'application/vnd.github.v3+json', 'User-Agent': 'tablero-jovenes' };
 
     const listRes = await fetch(apiUrl, { headers });
     if (listRes.status === 404) return Response.json({ boards: [] }, { headers: { 'Access-Control-Allow-Origin': '*' } });
