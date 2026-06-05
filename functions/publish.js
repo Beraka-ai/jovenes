@@ -1,10 +1,22 @@
 export async function onRequest(context) {
+  if (context.request.method === 'OPTIONS') {
+    return new Response(null, {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type'
+      }
+    });
+  }
+
   if (context.request.method !== 'POST') {
     return new Response('Method Not Allowed', { status: 405 });
   }
 
   try {
-    const { user, repo, token, content } = await context.request.json();
+    const body = await context.request.text();
+    if (!body) return Response.json({ error: 'Body vacío' }, { status: 400 });
+    const { user, repo, token, content } = JSON.parse(body);
 
     if (!user || !repo || !token || !content) {
       return Response.json({ error: 'Faltan datos requeridos' }, { status: 400 });
@@ -24,19 +36,16 @@ export async function onRequest(context) {
     const putRes = await fetch(apiUrl, {
       method: 'PUT',
       headers,
-      body: JSON.stringify({
-        message: 'Actualizar tablero',
-        content,
-        ...(sha && { sha })
-      })
+      body: JSON.stringify({ message: 'Actualizar tablero', content, ...(sha && { sha }) })
     });
 
     const result = await putRes.json();
     if (!putRes.ok) throw new Error(result.message || 'Error al publicar');
 
-    return Response.json({ ok: true });
+    return Response.json({ ok: true }, { headers: { 'Access-Control-Allow-Origin': '*' } });
 
   } catch (e) {
-    return Response.json({ error: e.message }, { status: 500 });
+    return Response.json({ error: e.message }, { status: 500, headers: { 'Access-Control-Allow-Origin': '*' } });
   }
 }
+
