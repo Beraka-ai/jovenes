@@ -1,7 +1,5 @@
 [build]
-  functions = "netlify/functions"
+  publish = "."
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "SAMEORIGIN"
+[functions]
+  directory = "netlify/functions"
