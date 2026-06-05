@@ -34,17 +34,15 @@ export async function onRequest(context) {
     if (getRes.ok) { const ex = await getRes.json(); sha = ex.sha; }
 
     const putRes = await fetch(apiUrl, {
-      method: 'PUT',
-      headers,
-      body: JSON.stringify({ message: 'Actualizar tablero', content, ...(sha && { sha }) })
-    });
+  method: 'PUT',
+  headers,
+  body: JSON.stringify({ message: 'Actualizar tablero', content, ...(sha && { sha }) })
+});
 
-    const result = await putRes.json();
-    if (!putRes.ok) throw new Error(result.message || 'Error al publicar');
+const rawText = await putRes.text(); // <-- captura texto crudo primero
 
-    return Response.json({ ok: true }, { headers: { 'Access-Control-Allow-Origin': '*' } });
+let result;
+try { result = JSON.parse(rawText); } 
+catch(e) { throw new Error(`Respuesta no-JSON (${putRes.status}): ${rawText}`); }
 
-  } catch (e) {
-    return Response.json({ error: e.message }, { status: 500, headers: { 'Access-Control-Allow-Origin': '*' } });
-  }
-}
+if (!putRes.ok) throw new Error(result.message || rawText);
