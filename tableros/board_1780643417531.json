@@ -27,7 +27,7 @@
       "questions": [
         {
           "pts": 100,
-          "text": "¿Qué es el arrebatamiento?ASD"
+          "text": "¿Qué es el arrebatamiento?"
         },
         {
           "pts": 400,
@@ -44,7 +44,7 @@
       ]
     },
     {
-      "name": "AMIGOSASD",
+      "name": "AMIGOS",
       "questions": [
         {
           "pts": 100,
@@ -65,7 +65,7 @@
       ]
     },
     {
-      "name": "ESPÍRITU SANTOASD",
+      "name": "ESPÍRITU SANTO",
       "questions": [
         {
           "pts": 100,
@@ -86,5 +86,5 @@
       ]
     }
   ],
-  "savedAt": "2026-06-05T07:32:05.559Z"
+  "savedAt": "2026-06-05T07:33:52.385Z"
 }
