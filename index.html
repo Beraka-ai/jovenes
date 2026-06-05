@@ -462,7 +462,7 @@ async function getBoards() {
     try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; } catch(e) { return []; }
   }
   try {
-    const res = await fetch('/.netlify/functions/list-boards', {
+    const res = await fetch('/functions/list-boards', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ user: ghConfig.user, repo: ghConfig.repo, token: ghConfig.token })
@@ -493,7 +493,7 @@ async function saveCurrentBoard() {
   // Save to GitHub if configured
   if (ghConfig.user && ghConfig.repo && ghConfig.token) {
     try {
-      await fetch('/.netlify/functions/save-board', {
+      await fetch('/functions/save-board', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ user: ghConfig.user, repo: ghConfig.repo, token: ghConfig.token, boardId: id, boardData })
@@ -526,7 +526,7 @@ async function deleteBoard(id) {
   // Delete from GitHub
   if (ghConfig.user && ghConfig.repo && ghConfig.token) {
     try {
-      await fetch('/.netlify/functions/delete-board', {
+      await fetch('/functions/delete-board', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ user: ghConfig.user, repo: ghConfig.repo, token: ghConfig.token, boardId: id })
@@ -919,7 +919,7 @@ async function publishOnline() {
 
     setPubStatus('loading', 'Publicando...');
 
-    const res = await fetch('/.netlify/functions/publish', {
+    const res = await fetch('/functions/publish', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ user, repo, token, content: encoded })
