@@ -502,7 +502,7 @@ function saveConfig() {
 
 // ── DATA ──
 let data = {
-  "title": "REUNIÓN DE JÓVENES",
+  "title": "REUNIÓN DE JÓVENES LA CEIBA",
   "categories": [
     {
       "name": "RELACIONES",
@@ -847,6 +847,9 @@ function openEdit() {
   if (ghConfig.user || ghConfig.repo) badge.style.display = 'inline-flex';
   else badge.style.display = 'none';
   document.getElementById('pub-status').className = 'pub-status';
+
+  // Reset publish button
+  document.getElementById('btn-publish').disabled = false;
 
   // Sync mode buttons to current state
   document.getElementById('mode-teach').classList.toggle('selected', currentMode === 'teach');
