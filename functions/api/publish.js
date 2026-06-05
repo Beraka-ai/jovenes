@@ -26,7 +26,7 @@ export async function onRequest(context) {
     const headers = {
       Authorization: `token ${token}`,
       Accept: 'application/vnd.github.v3+json',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
       'User-Agent': 'tablero-jovenes'
     };
 
