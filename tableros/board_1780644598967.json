@@ -1,0 +1,90 @@
+{
+  "title": "NUEVO TABLERO",
+  "categories": [
+    {
+      "name": "CATEGORÍA 1",
+      "questions": [
+        {
+          "pts": 100,
+          "text": "ASDF"
+        },
+        {
+          "pts": 400,
+          "text": "ASDF"
+        },
+        {
+          "pts": 800,
+          "text": "ASDF"
+        },
+        {
+          "pts": 1000,
+          "text": "ASDF"
+        }
+      ]
+    },
+    {
+      "name": "CATEGORÍA 2",
+      "questions": [
+        {
+          "pts": 100,
+          "text": "ASDF"
+        },
+        {
+          "pts": 400,
+          "text": "ASDF"
+        },
+        {
+          "pts": 800,
+          "text": "ASDF"
+        },
+        {
+          "pts": 1000,
+          "text": "ASDF"
+        }
+      ]
+    },
+    {
+      "name": "CATEGORÍA 3",
+      "questions": [
+        {
+          "pts": 100,
+          "text": "ASDF"
+        },
+        {
+          "pts": 400,
+          "text": "ASDF"
+        },
+        {
+          "pts": 800,
+          "text": "ASDF"
+        },
+        {
+          "pts": 1000,
+          "text": "ASDF"
+        }
+      ]
+    },
+    {
+      "name": "CATEGORÍA 4",
+      "questions": [
+        {
+          "pts": 100,
+          "text": "ASDF"
+        },
+        {
+          "pts": 400,
+          "text": "ASDF"
+        },
+        {
+          "pts": 800,
+          "text": "ASDF"
+        },
+        {
+          "pts": 1000,
+          "text": "ASDF"
+        }
+      ]
+    }
+  ],
+  "savedAt": "2026-06-05T07:29:58.967Z"
+}
