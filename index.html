@@ -256,7 +256,7 @@ body{background:var(--bg);font-family:'DM Sans',sans-serif;min-height:100vh;colo
 </header>
 
 <!-- Scoreboard (game mode) -->
-<div id="scoreboard" class="visible"><span id="scoreboard-title">Puntuación:</span><div class="team-chip active-team"><div class="chip-dot active" style="background:#E8FF47;box-shadow:0 0 6px #E8FF47"></div><span class="team-name">Equipo 1</span><span class="team-score">0</span></div><div class="team-chip"><div class="chip-dot" style="background:#FF5C5C"></div><span class="team-name">Equipo 2</span><span class="team-score">0</span></div></div>
+<div id="scoreboard" class=""><span id="scoreboard-title">Puntuación:</span><div class="team-chip active-team"><div class="chip-dot active" style="background:#E8FF47;box-shadow:0 0 6px #E8FF47"></div><span class="team-name">Equipo 1</span><span class="team-score">0</span></div><div class="team-chip"><div class="chip-dot" style="background:#FF5C5C"></div><span class="team-name">Equipo 2</span><span class="team-score">0</span></div></div>
 
 <div id="board"><div class="cat-header cat-0">RELACION</div><div class="cat-header cat-1">ARREBATAMIENTO</div><div class="cat-header cat-2">AMIGOS</div><div class="cat-header cat-3">ESPÍRITU SANTO</div><div class="q-card qcat-0"><span class="val">100</span></div><div class="q-card qcat-1"><span class="val">100</span></div><div class="q-card qcat-2"><span class="val">100</span></div><div class="q-card qcat-3"><span class="val">100</span></div><div class="q-card qcat-0"><span class="val">400</span></div><div class="q-card qcat-1"><span class="val">400</span></div><div class="q-card qcat-2"><span class="val">400</span></div><div class="q-card qcat-3"><span class="val">400</span></div><div class="q-card qcat-0"><span class="val">800</span></div><div class="q-card qcat-1"><span class="val">800</span></div><div class="q-card qcat-2"><span class="val">800</span></div><div class="q-card qcat-3"><span class="val">800</span></div><div class="q-card qcat-0"><span class="val">1000</span></div><div class="q-card qcat-1"><span class="val">1000</span></div><div class="q-card qcat-2"><span class="val">1000</span></div><div class="q-card qcat-3"><span class="val">1000</span></div></div>
 
@@ -293,7 +293,7 @@ body{background:var(--bg);font-family:'DM Sans',sans-serif;min-height:100vh;colo
           <span class="config-icon">🎮</span>
           <div>
             <h3>Modo de uso</h3>
-            <p id="mode-desc-header">Juego — equipos y puntuación</p>
+            <p id="mode-desc-header">Enseñanza — presentación de preguntas</p>
           </div>
         </div>
         <span class="config-arrow" id="mode-arrow">▾</span>
@@ -301,10 +301,10 @@ body{background:var(--bg);font-family:'DM Sans',sans-serif;min-height:100vh;colo
       <div class="config-body" id="mode-body">
         <div style="margin-bottom:14px;font-size:13px;color:var(--muted);line-height:1.6;">Elige cómo se usará el tablero en tu reunión.</div>
         <div class="mode-toggle" style="border-radius:12px;overflow:hidden;border:1px solid var(--border);width:100%;">
-          <button class="mode-btn" id="mode-teach" onclick="setMode('teach')" style="flex:1;padding:14px;">📖 Enseñanza</button>
-          <button class="mode-btn selected" id="mode-game" onclick="setMode('game')" style="flex:1;padding:14px;">🏆 Juego</button>
+          <button class="mode-btn selected" id="mode-teach" onclick="setMode('teach')" style="flex:1;padding:14px;">📖 Enseñanza</button>
+          <button class="mode-btn" id="mode-game" onclick="setMode('game')" style="flex:1;padding:14px;">🏆 Juego</button>
         </div>
-        <div id="mode-explain" style="margin-top:12px;font-size:12px;color:var(--muted);padding:10px 14px;background:var(--surface2);border-radius:8px;line-height:1.6;">Se crean equipos y se asignan puntos al equipo que responda correctamente. Al final se muestra el ganador.</div>
+        <div id="mode-explain" style="margin-top:12px;font-size:12px;color:var(--muted);padding:10px 14px;background:var(--surface2);border-radius:8px;line-height:1.6;">Las preguntas se abren una por una para que el grupo las piense junto. Sin equipos ni puntuación.</div>
       </div>
     </div>
 
@@ -402,7 +402,7 @@ body{background:var(--bg);font-family:'DM Sans',sans-serif;min-height:100vh;colo
         
           <div class="field">
             <label>100 puntos</label>
-            <textarea id="q-3-0" rows="3">¿Quién es el Espíritu Santo</textarea>
+            <textarea id="q-3-0" rows="3">¿Quién es el Espíritu Santo?</textarea>
           </div>
         
           <div class="field">
@@ -557,7 +557,7 @@ function saveConfig() {
 
 // ── DATA ──
 let data = {
-  "title": "REUNIÓN DE JÓVENES LA CEIBA",
+  "title": "REUNIÓN DE JÓVENES LA CEIBA HN",
   "categories": [
     {
       "name": "RELACION",
@@ -644,7 +644,7 @@ let data = {
       ]
     }
   ],
-  "savedAt": "2026-06-05T07:35:51.945Z"
+  "savedAt": "2026-06-05T08:03:10.066Z"
 };
 // ── BOARD STORAGE ──
 async function getBoards() {
