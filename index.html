@@ -198,7 +198,7 @@ body{background:var(--bg);font-family:'DM Sans',sans-serif;min-height:100vh;colo
 <header id="header">
   <div id="header-left">
     <span id="eyebrow">Quiz Interactivo</span>
-    <h1 id="main-title-display">REUNIÓN DE JÓVENES LA CEIBA HN</h1>
+    <h1 id="main-title-display">REUNIÓN DE JÓVENES</h1>
   </div>
   <div class="header-btns">
     <button class="hbtn" onclick="openHistory()">📋 Mis tableros</button>
@@ -208,19 +208,17 @@ body{background:var(--bg);font-family:'DM Sans',sans-serif;min-height:100vh;colo
 </header>
 
 <div id="scoreboard"></div>
-<div id="board"><div class="cat-header cat-0">RELACION</div><div class="cat-header cat-1">ARREBATAMIENTO</div><div class="cat-header cat-2">AMIGOS</div><div class="cat-header cat-3">ESPÍRITU SANTO</div><div class="q-card qcat-0"><span class="val">100</span></div><div class="q-card qcat-1"><span class="val">100</span></div><div class="q-card qcat-2"><span class="val">100</span></div><div class="q-card qcat-3"><span class="val">100</span></div><div class="q-card qcat-0"><span class="val">400</span></div><div class="q-card qcat-1"><span class="val">400</span></div><div class="q-card qcat-2"><span class="val">400</span></div><div class="q-card qcat-3"><span class="val">400</span></div><div class="q-card qcat-0"><span class="val">800</span></div><div class="q-card qcat-1"><span class="val">800</span></div><div class="q-card qcat-2"><span class="val">800</span></div><div class="q-card qcat-3"><span class="val">800</span></div><div class="q-card qcat-0"><span class="val">1000</span></div><div class="q-card qcat-1"><span class="val">1000</span></div><div class="q-card qcat-2"><span class="val">1000</span></div><div class="q-card qcat-3"><span class="val">1000</span></div></div>
+<div id="board"><div class="cat-header cat-0">RELACION</div><div class="cat-header cat-1">ARREBATAMIENTO</div><div class="cat-header cat-2">DE TODO UN POCO</div><div class="cat-header cat-3">ESPÍRITU SANTO</div><div class="q-card qcat-0 used"><span class="val">100</span></div><div class="q-card qcat-1 used"><span class="val">100</span></div><div class="q-card qcat-2"><span class="val">100</span></div><div class="q-card qcat-3 used"><span class="val">100</span></div><div class="q-card qcat-0"><span class="val">400</span></div><div class="q-card qcat-1"><span class="val">400</span></div><div class="q-card qcat-2"><span class="val">400</span></div><div class="q-card qcat-3"><span class="val">400</span></div><div class="q-card qcat-0"><span class="val">800</span></div><div class="q-card qcat-1"><span class="val">800</span></div><div class="q-card qcat-2"><span class="val">800</span></div><div class="q-card qcat-3"><span class="val">800</span></div><div class="q-card qcat-0 used"><span class="val">1000</span></div><div class="q-card qcat-1 used"><span class="val">1000</span></div><div class="q-card qcat-2"><span class="val">1000</span></div><div class="q-card qcat-3"><span class="val">1000</span></div></div>
 
-<div id="q-screen">
-  <div id="q-bar"></div>
+<div id="q-screen" data-key="0-3" data-pts="1000" class="">
+  <div id="q-bar" class="bar-0"></div>
   <div id="q-meta">
-    <span id="q-cat-badge">CATEGORÍA</span>
-    <span id="q-pts-label">100 PTS</span>
+    <span id="q-cat-badge" class="badge-0">RELACION</span>
+    <span id="q-pts-label">1000 PTS</span>
   </div>
-  <div id="q-text">¿Pregunta aquí?</div>
+  <div id="q-text">¿Por qué es importante guardar el corazón en todo tiempo y cuando se piensa en una relacion de noviazgo?</div>
   <button id="q-close" onclick="closeQuestion()">ESC — Cerrar</button>
-  <div id="game-score-btns">
-    <div id="score-label">¿Quién respondió?</div>
-  </div>
+  <div id="game-score-btns"><div id="score-label">¿Quién respondió correctamente?</div></div>
 </div>
 
 <div id="edit-panel" class="panel-overlay active">
@@ -242,9 +240,9 @@ body{background:var(--bg);font-family:'DM Sans',sans-serif;min-height:100vh;colo
             <p id="mode-desc-header">Enseñanza — presentación de preguntas</p>
           </div>
         </div>
-        <span class="config-arrow" id="mode-arrow">▾</span>
+        <span class="config-arrow open" id="mode-arrow">▾</span>
       </div>
-      <div class="config-body" id="mode-body">
+      <div class="config-body open" id="mode-body">
         <div style="margin-bottom:14px;font-size:13px;color:var(--muted);line-height:1.6;">Elige cómo se usará el tablero en tu reunión.</div>
         <div class="mode-toggle" style="border-radius:12px;overflow:hidden;border:1px solid var(--border);width:100%;">
           <button class="mode-btn selected" id="mode-teach" onclick="setMode('teach')" style="flex:1;padding:14px;">📖 Enseñanza</button>
@@ -263,22 +261,22 @@ body{background:var(--bg);font-family:'DM Sans',sans-serif;min-height:100vh;colo
         
           <div class="field">
             <label>100 puntos</label>
-            <textarea id="q-0-0" rows="3">¿Qué dice la Biblia que debemos hacer antes de casarnos?</textarea>
+            <textarea id="q-0-0" rows="3">¿Qué dice la Biblia acerca de amigos con derecho?</textarea>
           </div>
         
           <div class="field">
             <label>400 puntos</label>
-            <textarea id="q-0-1" rows="3">¿Qué significa estar "igualmente unidos" según 2 Corintios 6:14?</textarea>
+            <textarea id="q-0-1" rows="3">¿Qué significa no despiertes el amor antes de tiempo?</textarea>
           </div>
         
           <div class="field">
             <label>800 puntos</label>
-            <textarea id="q-0-2" rows="3">¿Cuál es el fundamento que Dios diseñó para una relación sana?</textarea>
+            <textarea id="q-0-2" rows="3">¿Sexualidad, quien te enseña?</textarea>
           </div>
         
           <div class="field">
             <label>1000 puntos</label>
-            <textarea id="q-0-3" rows="3">¿Por qué es importante guardar el corazón en el noviazgo según Proverbios 4:23?</textarea>
+            <textarea id="q-0-3" rows="3">¿Por qué es importante guardar el corazón en todo tiempo y cuando se piensa en una relacion de noviazgo?</textarea>
           </div>
         
       </div></div><div class="edit-block">
@@ -313,13 +311,13 @@ body{background:var(--bg);font-family:'DM Sans',sans-serif;min-height:100vh;colo
       <div class="edit-block-title">Categoría 3</div>
       <div class="field">
         <label>Nombre</label>
-        <input class="cat-inp" type="text" id="cname-2" value="AMIGOS">
+        <input class="cat-inp" type="text" id="cname-2" value="DE TODO UN POCO">
       </div>
       <div class="field-row">
         
           <div class="field">
             <label>100 puntos</label>
-            <textarea id="q-2-0" rows="3">¿Qué dice Proverbios 27:17 sobre la amistad?</textarea>
+            <textarea id="q-2-0" rows="3">¿Cuando necesito un consejo, a quien busco, mis papas no me entienden, que hago?</textarea>
           </div>
         
           <div class="field">
@@ -329,12 +327,12 @@ body{background:var(--bg);font-family:'DM Sans',sans-serif;min-height:100vh;colo
         
           <div class="field">
             <label>800 puntos</label>
-            <textarea id="q-2-2" rows="3">¿Por qué las malas compañías corrompen las buenas costumbres según 1 Corintios 15:33?</textarea>
+            <textarea id="q-2-2" rows="3">¿En este tiempo cuesta confiar, que busco en un hermano(a) para que me de buen consejo?</textarea>
           </div>
         
           <div class="field">
             <label>1000 puntos</label>
-            <textarea id="q-2-3" rows="3">¿Qué ejemplo de amistad verdadera vemos en la Biblia entre Jonatán y David?</textarea>
+            <textarea id="q-2-3" rows="3">¿Como logro decir no a lo malo y si a lo bueno?</textarea>
           </div>
         
       </div></div><div class="edit-block">
@@ -404,7 +402,67 @@ body{background:var(--bg);font-family:'DM Sans',sans-serif;min-height:100vh;colo
       <h2>Mis tableros</h2>
       <button class="panel-x" onclick="closeHistory()">✕ Cerrar</button>
     </div>
-    <div id="history-list" class="history-list"></div>
+    <div id="history-list" class="history-list"><div class="history-item">
+      <div class="hist-info">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span class="hist-name">REUNIÓN DE JÓVENES</span>
+          
+        </div>
+        <span class="hist-meta">Guardado: 5 jun 2026, 10:05</span>
+        <div class="hist-cats"><span class="hist-cat-pill" style="background:#E8FF47">RELACION</span><span class="hist-cat-pill" style="background:#FF5C5C">ARREBATAMIENTO</span><span class="hist-cat-pill" style="background:#5CE8FF">DE TODO UN POCO</span><span class="hist-cat-pill" style="background:#BF7FFF">ESPÍRITU SANTO</span></div>
+      </div>
+      <div class="hist-actions">
+        <button class="hist-load-btn" onclick="loadBoard('board_1780675433835');closeHistory();">Cargar</button>
+        <button class="hist-del-btn" onclick="confirmDeleteBoard('board_1780675433835')">🗑</button>
+      </div></div><div class="history-item">
+      <div class="hist-info">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span class="hist-name">REUNIÓN DE JÓVENES</span>
+          
+        </div>
+        <span class="hist-meta">Guardado: 5 jun 2026, 05:53</span>
+        <div class="hist-cats"><span class="hist-cat-pill" style="background:#E8FF47">RELACION</span><span class="hist-cat-pill" style="background:#FF5C5C">ARREBATAMIENTO</span><span class="hist-cat-pill" style="background:#5CE8FF">AMIGOS</span><span class="hist-cat-pill" style="background:#BF7FFF">ESPÍRITU SANTO</span></div>
+      </div>
+      <div class="hist-actions">
+        <button class="hist-load-btn" onclick="loadBoard('board_1780660408211');closeHistory();">Cargar</button>
+        <button class="hist-del-btn" onclick="confirmDeleteBoard('board_1780660408211')">🗑</button>
+      </div></div><div class="history-item current-item">
+      <div class="hist-info">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span class="hist-name">REUNIÓN DE JÓVENES LA CEIBA HN</span>
+          <span class="current-badge">Activo</span>
+        </div>
+        <span class="hist-meta">Guardado: 5 jun 2026, 02:12</span>
+        <div class="hist-cats"><span class="hist-cat-pill" style="background:#E8FF47">RELACION</span><span class="hist-cat-pill" style="background:#FF5C5C">ARREBATAMIENTO</span><span class="hist-cat-pill" style="background:#5CE8FF">AMIGOS</span><span class="hist-cat-pill" style="background:#BF7FFF">ESPÍRITU SANTO</span></div>
+      </div>
+      <div class="hist-actions">
+        
+        <button class="hist-del-btn" onclick="confirmDeleteBoard('board_1780646590066')">🗑</button>
+      </div></div><div class="history-item">
+      <div class="hist-info">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span class="hist-name">REUNIÓN DE JÓVENES LA CEIBA</span>
+          
+        </div>
+        <span class="hist-meta">Guardado: 5 jun 2026, 01:45</span>
+        <div class="hist-cats"><span class="hist-cat-pill" style="background:#E8FF47">RELACION</span><span class="hist-cat-pill" style="background:#FF5C5C">ARREBATAMIENTO</span><span class="hist-cat-pill" style="background:#5CE8FF">AMIGOS</span><span class="hist-cat-pill" style="background:#BF7FFF">ESPÍRITU SANTO</span></div>
+      </div>
+      <div class="hist-actions">
+        <button class="hist-load-btn" onclick="loadBoard('board_1780643417531');closeHistory();">Cargar</button>
+        <button class="hist-del-btn" onclick="confirmDeleteBoard('board_1780643417531')">🗑</button>
+      </div></div><div class="history-item">
+      <div class="hist-info">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span class="hist-name">NUEVO TABLERO</span>
+          
+        </div>
+        <span class="hist-meta">Guardado: 5 jun 2026, 01:29</span>
+        <div class="hist-cats"><span class="hist-cat-pill" style="background:#E8FF47">CATEGORÍA 1</span><span class="hist-cat-pill" style="background:#FF5C5C">CATEGORÍA 2</span><span class="hist-cat-pill" style="background:#5CE8FF">CATEGORÍA 3</span><span class="hist-cat-pill" style="background:#BF7FFF">CATEGORÍA 4</span></div>
+      </div>
+      <div class="hist-actions">
+        <button class="hist-load-btn" onclick="loadBoard('board_1780644598967');closeHistory();">Cargar</button>
+        <button class="hist-del-btn" onclick="confirmDeleteBoard('board_1780644598967')">🗑</button>
+      </div></div></div>
   </div>
 </div>
 
