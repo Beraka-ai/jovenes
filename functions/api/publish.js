@@ -27,6 +27,7 @@ export async function onRequest(context) {
       Authorization: `token ${token}`,
       Accept: 'application/vnd.github.v3+json',
       'Content-Type': 'application/json'
+      'User-Agent': 'tablero-jovenes'
     };
 
     let sha = null;
