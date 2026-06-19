@@ -1,0 +1,90 @@
+{
+  "title": "DRA CAROLINA",
+  "categories": [
+    {
+      "name": "CATEGORÍA 1",
+      "questions": [
+        {
+          "pts": 100,
+          "text": ""
+        },
+        {
+          "pts": 400,
+          "text": ""
+        },
+        {
+          "pts": 800,
+          "text": ""
+        },
+        {
+          "pts": 1000,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "name": "CATEGORÍA 2",
+      "questions": [
+        {
+          "pts": 100,
+          "text": ""
+        },
+        {
+          "pts": 400,
+          "text": ""
+        },
+        {
+          "pts": 800,
+          "text": ""
+        },
+        {
+          "pts": 1000,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "name": "CATEGORÍA 3",
+      "questions": [
+        {
+          "pts": 100,
+          "text": ""
+        },
+        {
+          "pts": 400,
+          "text": ""
+        },
+        {
+          "pts": 800,
+          "text": ""
+        },
+        {
+          "pts": 1000,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "name": "CATEGORÍA 4",
+      "questions": [
+        {
+          "pts": 100,
+          "text": ""
+        },
+        {
+          "pts": 400,
+          "text": ""
+        },
+        {
+          "pts": 800,
+          "text": ""
+        },
+        {
+          "pts": 1000,
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "savedAt": "2026-06-19T17:47:56.437Z"
+}
